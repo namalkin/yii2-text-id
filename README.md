@@ -105,3 +105,9 @@ php yii migrate
 
 ИТОГО
 -------------
+
+Выполнение create
+![Действие create](md/one.png)
+
+Выполнение view
+![Действие view+telegram](md/two.png)

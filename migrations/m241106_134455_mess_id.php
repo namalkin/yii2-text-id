@@ -21,7 +21,7 @@ class m241106_134455_mess_id extends Migration
     public function safeDown()
     {
         echo "m241106_134455_mess_id cannot be reverted.\n";
-
+ 
         return false;
     }
 

@@ -26,6 +26,12 @@ $config = [
         // 'errorHandler' => [
         //     'errorAction' => 'site/error',
         // ],
+
+        'telegram' => [
+            'class' => 'aki\telegram\Telegram',
+            'botToken' => '8007887801:AAGjLqReTbdRw9PqXziqxYmT4pjEffFOmd8',
+        ],
+
         'mailer' => [
             'class' => \yii\symfonymailer\Mailer::class,
             'viewPath' => '@app/mail',

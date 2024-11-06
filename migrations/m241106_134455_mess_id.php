@@ -31,6 +31,8 @@ class m241106_134455_mess_id extends Migration
             'id' => $this->primaryKey(),
             'text' => $this->text()->notNull(),
         ]);
+
+        $this->execute('ALTER TABLE message CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci');
     }
     
     public function down()

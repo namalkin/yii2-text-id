@@ -23,9 +23,9 @@ $config = [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
         ],
-        'errorHandler' => [
-            'errorAction' => 'site/error',
-        ],
+        // 'errorHandler' => [
+        //     'errorAction' => 'site/error',
+        // ],
         'mailer' => [
             'class' => \yii\symfonymailer\Mailer::class,
             'viewPath' => '@app/mail',
@@ -42,14 +42,18 @@ $config = [
             ],
         ],
         'db' => $db,
-        /*
+        
         'urlManager' => [
-            'enablePrettyUrl' => true,
+            'enablePrettyUrl' => true, // Закомментируй, чтобы использовать gii
             'showScriptName' => false,
             'rules' => [
+                'message/create' => 'message/create',
+                'message/view' => 'message/view',
+                'message' => 'message/create',
+                '' => 'message/create',
             ],
         ],
-        */
+        
     ],
     'params' => $params,
 ];
@@ -60,14 +64,14 @@ if (YII_ENV_DEV) {
     $config['modules']['debug'] = [
         'class' => 'yii\debug\Module',
         // uncomment the following to add your IP if you are not connecting from localhost.
-        // 'allowedIPs' => ['127.0.0.1', '::1'],
+        //'allowedIPs' => ['127.0.0.1', '::1'],
     ];
 
     $config['bootstrap'][] = 'gii';
     $config['modules']['gii'] = [
         'class' => 'yii\gii\Module',
         // uncomment the following to add your IP if you are not connecting from localhost.
-        'allowedIPs' => ['127.0.0.1', '::1', '*'],
+        'allowedIPs' => ['*'],
     ];
 }
 

@@ -109,5 +109,5 @@ php yii migrate
 Выполнение create
 ![Действие create](md/one.png)
 
-Выполнение view
+Выполнение view+telegram
 ![Действие view+telegram](md/two.png)
